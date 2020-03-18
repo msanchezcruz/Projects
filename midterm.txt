@@ -40,3 +40,17 @@ size_t strcpy(char * s, const char * t){
 	return &s; //returns the address of s  
 
 }
+
+char * strncat(char * s , const char * toadd){
+		char * startpos;
+		while( *s != '\0'){ //while te\he object at s is not \0 
+			s++; 	//increment the pointer
+			startpos = s; //assign the address of object before '\0' to start pos
+		}
+		while( *toadd != '\0'){// while the object at toadd[i] != 0
+			*startpos = *toadd; //add the value of object at dereferenced to add position to start position
+			startpos++; //increment pointr
+			toadd++;  //increment pointer
+		}
+		return s; //return pointer to s
+}
