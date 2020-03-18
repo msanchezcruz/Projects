@@ -1,0 +1,40 @@
+#include <stdio.h>
+#include <ctype.h> 
+
+
+void count() {
+ printf("Enter lines of text here: .../n");
+ int c, nc = '0', nt = '\0', nbackslash = 0 , nl = 0; // nl was undeclared
+ while ((c = fgetc(stderr)) != EOF) {
+ if (c == '\n') { ++nl; // single quoates for character
+ } else if (c == '\t') { ++nt;
+ } else if (c == '\\') { nbackslash += 1;
+ } else if (isspace(c)) { ++nc; }
+ printf("lines: %d\n", nl); //change fprint to printf
+ printf("tabs: %d\n", nt); //change sprint to fprint and %z to %d
+ printf("backslashes: %d\n", nbackslash); //changed %u to %d
+ printf("alphanumeric: %d\n", nc); // changed %f to %d or could of been long digit depending on number
+}
+}
+int main(int argc, const char* argv[]) {
+
+ count();
+ return 0;
+} 
+
+// The C Standard Library: Identify the standard library functions that do the following…
+// (3 pts) (2) Find the first character c in a const char* s: char *strchr(cs,c);
+// (3 pts) (3) Find the length of the prefix of const char* s that has characters in const char* t: size_t strspn(cs , ct)
+// (3 pts) (4) Terminate a program immediately return 0;
+// (3 pts) (5) Open the file “midterm.txt” in read mode FILE * fp = fopen("midterm.txt", 'r');
+
+size_t strcpy(char * s, const char * t){
+
+	while(   != '\0' ){
+
+		
+	}
+
+
+
+}
