@@ -30,11 +30,13 @@ int main(int argc, const char* argv[]) {
 
 size_t strcpy(char * s, const char * t){
 
-	while(   != '\0' ){
-
-		
+	char c = *t;	//assign the value at t to c
+	while(  c != '\0' ){ //while it is not the end of the string
+		*s = c; //assign the value of c to the value object s is pointing to
+		t++; //increment the address of t to the next object
+		s++; //increment the address of s to the next object
 	}
 
-
+	return &s; //returns the address of s  
 
 }
