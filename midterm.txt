@@ -54,3 +54,18 @@ char * strncat(char * s , const char * toadd){
 		}
 		return s; //return pointer to s
 }
+
+int strcmp(const char * s1, const char * s2){ //strings will be compared not modified to they are const
+
+	while( s1 != '\0' || s2 != '\0'){ //while neither of them equal terminating character
+		if((int)*s1 == (int)*s2){ // check if both characters are equal
+			s1++; //increment pointers to next object
+			s2++;
+
+		}
+		if((int)*s1 > (int)*s2){ return 1;	} //checks if either is greater than the other.
+		if((int)*s1 < (int)*s2){ return -1; }
+	}
+
+	return 0; //return 0 if both are equal
+}
